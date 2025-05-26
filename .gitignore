@@ -1,0 +1,12 @@
+# Archivos a ignorar
+/target/
+/.nb-gradle/
+*.class
+*.jar
+*.war
+*.ear
+/.settings/
+/.idea/
+*.iml
+/out/
+/build/
