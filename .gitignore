@@ -10,3 +10,4 @@
 *.iml
 /out/
 /build/
+!/lib/mysql-connector-java-8.0.33.jar
