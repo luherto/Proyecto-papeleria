@@ -4,8 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/valen/OneDrive/Documentos/Compartido/Proyecto/Registro_de_inventario/src/Registro_de_inventario/Graphic_UI/UserLogin.java</file>
-            <file>file:/C:/Users/valen/OneDrive/Documentos/Compartido/Proyecto/Registro_de_inventario/src/Registro_de_inventario/Graphic_UI/User_UI1.java</file>
             <file>file:/C:/Users/valen/OneDrive/Documentos/Compartido/Proyecto/Registro_de_inventario/src/Registro_de_inventario/Cconnection.java</file>
+            <file>file:/C:/Users/valen/OneDrive/Documentos/Compartido/Proyecto/Registro_de_inventario/src/Registro_de_inventario/Graphic_UI/User_UI1.java</file>
+            <file>file:/C:/Users/valen/OneDrive/Documentos/Compartido/Proyecto/Registro_de_inventario/src/Registro_de_inventario/User_service.java</file>
+            <file>file:/C:/Users/valen/OneDrive/Documentos/Compartido/Proyecto/Registro_de_inventario/src/Registro_de_inventario/Password_security.java</file>
         </group>
     </open-files>
 </project-private>

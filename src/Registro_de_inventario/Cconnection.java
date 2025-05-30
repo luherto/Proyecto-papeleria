@@ -19,17 +19,17 @@ import javax.swing.table.DefaultTableModel;
  * @author Valente
  */
 public class Cconnection {
+     static Connection conexion = null;
+     static String usuario = "valen";
+     static String contrasena = "tonto";
+     static String bd = "Registro_de_inventario";
+     static String ip = "192.168.100.28";
+     static String puerto = "3306";
 
-    private Connection conexion = null;
-    private final String usuario = "valen";
-    private final String contrasena = "tonto";
-    private final String bd = "Registro_de_inventario";
-    private final String ip = "192.168.100.28";
-    private final String puerto = "3306";
+     static String cadena = "jdbc:mysql://" + ip + ":" + puerto + "/" + bd;
 
-    private final String cadena = "jdbc:mysql://" + ip + ":" + puerto + "/" + bd;
+    public static  Connection estableceConexion() {
 
-    public Connection estableceConexion() {
         try {
             if (conexion == null || conexion.isClosed()) {
                 Class.forName("com.mysql.jdbc.Driver");
