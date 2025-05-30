@@ -59,7 +59,7 @@ INSERT INTO `Registro` VALUES
 (17,'Separadores','Multicolor','Paquete de 12 unidades','25'),
 (18,'Post-it','Amarillo','Bloc 100 hojas 76x76mm','40'),
 (19,'Portaminas','Negro','Grafito 0.5mm','35'),
-(20,'Minas','Gris','Paquete de 12 minas 0.5mm','50'),
+(20,'Minas','Gris','Paquete de 12 minas 0.5mm','51'),
 (21,'Estuche','Negro','Con cremallera 3 compartimentos','15'),
 (22,'Mochila','Rojo','Con ruedas y asa extensible','10'),
 (23,'Pizarra','Blanco','Magnética 60x90cm','5'),
@@ -139,8 +139,42 @@ INSERT INTO `Registro` VALUES
 (97,'Portatarjetas','Acrílico transparente','Vertical','15'),
 (98,'Soporte para libros','Madera','Ajustable a 3 alturas','10'),
 (99,'Organizador de cables','Negro','Con 5 bandas elásticas','20'),
-(100,'Kit de oficina','Multicolor','Incluye 20 artículos','5');
+(100,'Kit de oficina','Multicolor','Incluye 20 artículos','5'),
+(101,'Libreta','Verde','Libreta de cuadro grande','6'),
+(102,'Estuchera','Rosa','Estuchera color rosa pequenia','5');
 /*!40000 ALTER TABLE `Registro` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Usuarios`
+--
+
+DROP TABLE IF EXISTS `Usuarios`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Usuarios` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(50) NOT NULL,
+  `password_hash` varchar(255) NOT NULL,
+  `salt` varchar(255) NOT NULL,
+  `fecha_creacion` timestamp NULL DEFAULT current_timestamp(),
+  `ultimo_acceso` timestamp NULL DEFAULT NULL,
+  `activo` tinyint(1) DEFAULT 1,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `user_name` (`user_name`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Usuarios`
+--
+
+LOCK TABLES `Usuarios` WRITE;
+/*!40000 ALTER TABLE `Usuarios` DISABLE KEYS */;
+INSERT INTO `Usuarios` VALUES
+(1,'luisva','fOykG90sxNh1UlEAO887oAd2aoVGajjNudjAN22KAHU=','KJ0u6DUUZOKfmto2eGpzRw==','2025-05-29 23:57:25',NULL,1),
+(2,'luis','ceGlllsyvh+1JEBET0qlw9yM4m4VetMO3NvMeIV4Hrg=','kyEtpwhfXgmfXuoMmVaGeA==','2025-05-30 00:17:22',NULL,1);
+/*!40000 ALTER TABLE `Usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -152,4 +186,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-25 17:39:40
+-- Dump completed on 2025-05-29 21:29:11
